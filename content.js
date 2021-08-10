@@ -9,7 +9,7 @@ if(document.body.contains(document.getElementById('wpadminbar'))){
 			for (var j = 0; j < element.childNodes.length; j++) {
 				var node = element.childNodes[j];
 				
-				if (node.nodeType === 3) {
+				if (node.nodeType == Node.TEXT_NODE) {
 					var text = node.nodeValue;
 					var reggy = new RegExp(fromword[k], 'g'+'i');
 					var replacedText = text.replace(reggy, toword[k]);
